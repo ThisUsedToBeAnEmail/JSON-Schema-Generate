@@ -16,8 +16,7 @@ my %WriteMakefileArgs = (
     },
     TEST_REQUIRES => {
         'Test::More' => '0',
-    	'JSON::Schema' => '0',
-	'JSON::Schema::Draft201909' => '0'
+    	'JSON::Schema' => '0'
     },
     PREREQ_PM => {
 	'JSON' => '0',
