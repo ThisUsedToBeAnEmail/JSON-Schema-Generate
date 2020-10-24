@@ -17,12 +17,14 @@ my %WriteMakefileArgs = (
     TEST_REQUIRES => {
         'Test::More' => '0',
     	'JSON::Schema' => '0',
+	'JSON::Schema::Draft201909' => '0'
     },
     PREREQ_PM => {
-	'JSON' => 0,
-	'Compiled::Params::OO' => 0.04,
-	'Type::Tiny' => 1.010001,
-    	'Tie::IxHash' => 1.23
+	'JSON' => '0',
+	'Compiled::Params::OO' => '0.04',
+	'Type::Tiny' => '1.010001',
+    	'Tie::IxHash' => '1.23',
+	'Blessed::Merge' => '1.00'
     },
     dist  => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean => { FILES => 'JSON-Schema-Generate-*' },

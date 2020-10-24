@@ -79,10 +79,6 @@ use JSON::Schema::Draft201909;
 
 $js = JSON::Schema::Draft201909->new;
 $result = $js->evaluate_json_string($data1, $schema);
-
-use Data::Dumper;
-warn Dumper $result;
-
-ok($result);
+ok($result->{errors});
 
 done_testing;

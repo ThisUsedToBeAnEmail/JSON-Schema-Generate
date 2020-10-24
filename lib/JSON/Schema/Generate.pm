@@ -1,15 +1,8 @@
 package JSON::Schema::Generate;
+use 5.006; use strict; use warnings; our $VERSION = '0.05';
+use Tie::IxHash; use Types::Standard qw/Str HashRef Bool/;
+use Compiled::Params::OO qw/cpo/; use JSON; use Blessed::Merge;
 
-use 5.006;
-use strict;
-use warnings;
-use Tie::IxHash;
-
-our $VERSION = '0.05';
-use Types::Standard qw/Str HashRef Bool/;
-use Compiled::Params::OO qw/cpo/;
-use JSON;
-use Blessed::Merge;
 our ($validate, $JSON);
 BEGIN {
 	$validate = cpo(
