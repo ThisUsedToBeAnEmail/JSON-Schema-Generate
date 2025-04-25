@@ -5,16 +5,16 @@
    "description" : "A representation of a cpan author.",
    "type" : "object",
    "required" : [
-      "email",
-      "asciiname",
-      "links",
       "name",
-      "is_pause_custodial_account",
-      "other",
-      "pauseid",
       "gravatar_url",
+      "other",
+      "website",
       "release_count",
-      "website"
+      "links",
+      "email",
+      "pauseid",
+      "asciiname",
+      "is_pause_custodial_account"
    ],
    "properties" : {
       "asciiname" : {
@@ -44,12 +44,12 @@
       "links" : {
          "type" : "object",
          "required" : [
+            "backpan_directory",
+            "cpantesters_reports",
             "cpan_directory",
             "metacpan_explorer",
             "cpants",
-            "cpantesters_reports",
-            "cpantesters_matrix",
-            "backpan_directory"
+            "cpantesters_matrix"
          ],
          "properties" : {
             "backpan_directory" : {
@@ -95,9 +95,9 @@
       "release_count" : {
          "type" : "object",
          "required" : [
-            "latest",
+            "cpan",
             "backpan-only",
-            "cpan"
+            "latest"
          ],
          "properties" : {
             "backpan-only" : {

@@ -102,7 +102,7 @@ sub learn {
 sub generate {
 	my ($self, $struct) = @_;
 	$self->_handle_required($self->{schema}) unless $self->{none_required};
-	return $struct ? $self->{schema} : $JSON->encode($self->{schema});
+	return $struct ? $self->{schema} : $JSON->canonical->encode($self->{schema});
 }
 
 sub _handle_required {

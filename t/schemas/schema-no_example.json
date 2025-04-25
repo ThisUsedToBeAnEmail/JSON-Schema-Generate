@@ -5,16 +5,16 @@
    "description" : "A representation of a cpan author.",
    "type" : "object",
    "required" : [
-      "gravatar_url",
+      "website",
       "name",
-      "email",
-      "release_count",
+      "asciiname",
+      "is_pause_custodial_account",
+      "gravatar_url",
       "links",
       "other",
-      "pauseid",
-      "website",
-      "is_pause_custodial_account",
-      "asciiname"
+      "email",
+      "release_count",
+      "pauseid"
    ],
    "properties" : {
       "asciiname" : {
@@ -68,12 +68,12 @@
          "description" : "An explanation about the purpose of this instance",
          "type" : "object",
          "required" : [
-            "cpan_directory",
-            "cpantesters_reports",
-            "cpants",
+            "metacpan_explorer",
             "backpan_directory",
             "cpantesters_matrix",
-            "metacpan_explorer"
+            "cpants",
+            "cpantesters_reports",
+            "cpan_directory"
          ],
          "properties" : {
             "backpan_directory" : {

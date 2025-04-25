@@ -6,64 +6,64 @@
    "type" : "object",
    "examples" : [
       {
-         "region" : "GHANDI",
-         "pauseid" : "LNATION",
-         "city" : "PLUTO",
          "asciiname" : "Robert Acock",
-         "release_count" : {
-            "backpan-only" : 34,
-            "latest" : 114,
-            "cpan" : 378
-         },
-         "website" : [
-            "https://www.lnation.org"
-         ],
-         "links" : {
-            "cpants" : "http://cpants.cpanauthors.org/author/LNATION",
-            "cpan_directory" : "http://cpan.org/authors/id/L/LN/LNATION",
-            "cpantesters_matrix" : "http://matrix.cpantesters.org/?author=LNATION",
-            "cpantesters_reports" : "http://cpantesters.org/author/L/LNATION.html",
-            "backpan_directory" : "https://cpan.metacpan.org/authors/id/L/LN/LNATION",
-            "metacpan_explorer" : "https://explorer.metacpan.org/?url=/author/LNATION"
-         },
-         "is_pause_custodial_account" : false,
-         "name" : "Robert Acock",
+         "city" : "PLUTO",
          "country" : "WO",
-         "updated" : "2020-02-16T16:43:51",
          "email" : [
             "lnation@cpan.org"
          ],
          "gravatar_url" : "https://secure.gravatar.com/avatar/8e509558181e1d2a0d3a5b55dec0b108?s=130&d=identicon",
+         "is_pause_custodial_account" : false,
+         "links" : {
+            "backpan_directory" : "https://cpan.metacpan.org/authors/id/L/LN/LNATION",
+            "cpan_directory" : "http://cpan.org/authors/id/L/LN/LNATION",
+            "cpantesters_matrix" : "http://matrix.cpantesters.org/?author=LNATION",
+            "cpantesters_reports" : "http://cpantesters.org/author/L/LNATION.html",
+            "cpants" : "http://cpants.cpanauthors.org/author/LNATION",
+            "metacpan_explorer" : "https://explorer.metacpan.org/?url=/author/LNATION"
+         },
+         "name" : "Robert Acock",
          "other" : [
             true,
             null,
             "string",
             10
+         ],
+         "pauseid" : "LNATION",
+         "region" : "GHANDI",
+         "release_count" : {
+            "backpan-only" : 34,
+            "cpan" : 378,
+            "latest" : 114
+         },
+         "updated" : "2020-02-16T16:43:51",
+         "website" : [
+            "https://www.lnation.org"
          ]
       },
       {
+         "asciiname" : "",
+         "email" : "damian@conway.org",
+         "gravatar_url" : "https://secure.gravatar.com/avatar/3d4a6a089964a744d7b3cf2415f81951?s=130&d=identicon",
+         "is_pause_custodial_account" : false,
+         "links" : {
+            "backpan_directory" : "https://cpan.metacpan.org/authors/id/D/DC/DCONWAY",
+            "cpan_directory" : "http://cpan.org/authors/id/D/DC/DCONWAY",
+            "cpantesters_matrix" : "http://matrix.cpantesters.org/?author=DCONWAY",
+            "cpantesters_reports" : "http://cpantesters.org/author/D/DCONWAY.html",
+            "cpants" : "http://cpants.cpanauthors.org/author/DCONWAY",
+            "metacpan_explorer" : "https://explorer.metacpan.org/?url=/author/DCONWAY"
+         },
+         "name" : "Damian Conway",
          "other" : [
             null,
             false
          ],
-         "release_count" : {
-            "cpan" : 190,
-            "latest" : 56,
-            "backpan-only" : 358
-         },
-         "asciiname" : "",
-         "gravatar_url" : "https://secure.gravatar.com/avatar/3d4a6a089964a744d7b3cf2415f81951?s=130&d=identicon",
-         "email" : "damian@conway.org",
-         "name" : "Damian Conway",
-         "is_pause_custodial_account" : false,
          "pauseid" : "DCONWAY",
-         "links" : {
-            "cpants" : "http://cpants.cpanauthors.org/author/DCONWAY",
-            "cpan_directory" : "http://cpan.org/authors/id/D/DC/DCONWAY",
-            "backpan_directory" : "https://cpan.metacpan.org/authors/id/D/DC/DCONWAY",
-            "metacpan_explorer" : "https://explorer.metacpan.org/?url=/author/DCONWAY",
-            "cpantesters_matrix" : "http://matrix.cpantesters.org/?author=DCONWAY",
-            "cpantesters_reports" : "http://cpantesters.org/author/D/DCONWAY.html"
+         "release_count" : {
+            "backpan-only" : 358,
+            "cpan" : 190,
+            "latest" : 56
          },
          "website" : [
             "http://damian.conway.org/"
@@ -71,16 +71,16 @@
       }
    ],
    "required" : [
-      "other",
-      "email",
-      "gravatar_url",
-      "name",
-      "website",
-      "links",
-      "is_pause_custodial_account",
-      "release_count",
       "asciiname",
-      "pauseid"
+      "release_count",
+      "name",
+      "gravatar_url",
+      "email",
+      "pauseid",
+      "links",
+      "website",
+      "is_pause_custodial_account",
+      "other"
    ],
    "properties" : {
       "asciiname" : {
@@ -159,29 +159,29 @@
          "type" : "object",
          "examples" : [
             {
-               "cpants" : "http://cpants.cpanauthors.org/author/LNATION",
+               "backpan_directory" : "https://cpan.metacpan.org/authors/id/L/LN/LNATION",
                "cpan_directory" : "http://cpan.org/authors/id/L/LN/LNATION",
                "cpantesters_matrix" : "http://matrix.cpantesters.org/?author=LNATION",
                "cpantesters_reports" : "http://cpantesters.org/author/L/LNATION.html",
-               "backpan_directory" : "https://cpan.metacpan.org/authors/id/L/LN/LNATION",
+               "cpants" : "http://cpants.cpanauthors.org/author/LNATION",
                "metacpan_explorer" : "https://explorer.metacpan.org/?url=/author/LNATION"
             },
             {
-               "cpants" : "http://cpants.cpanauthors.org/author/DCONWAY",
-               "cpan_directory" : "http://cpan.org/authors/id/D/DC/DCONWAY",
                "backpan_directory" : "https://cpan.metacpan.org/authors/id/D/DC/DCONWAY",
-               "metacpan_explorer" : "https://explorer.metacpan.org/?url=/author/DCONWAY",
+               "cpan_directory" : "http://cpan.org/authors/id/D/DC/DCONWAY",
                "cpantesters_matrix" : "http://matrix.cpantesters.org/?author=DCONWAY",
-               "cpantesters_reports" : "http://cpantesters.org/author/D/DCONWAY.html"
+               "cpantesters_reports" : "http://cpantesters.org/author/D/DCONWAY.html",
+               "cpants" : "http://cpants.cpanauthors.org/author/DCONWAY",
+               "metacpan_explorer" : "https://explorer.metacpan.org/?url=/author/DCONWAY"
             }
          ],
          "required" : [
-            "cpan_directory",
-            "cpants",
             "metacpan_explorer",
             "backpan_directory",
+            "cpantesters_reports",
+            "cpan_directory",
             "cpantesters_matrix",
-            "cpantesters_reports"
+            "cpants"
          ],
          "properties" : {
             "backpan_directory" : {
@@ -307,13 +307,13 @@
          "examples" : [
             {
                "backpan-only" : 34,
-               "latest" : 114,
-               "cpan" : 378
+               "cpan" : 378,
+               "latest" : 114
             },
             {
+               "backpan-only" : 358,
                "cpan" : 190,
-               "latest" : 56,
-               "backpan-only" : 358
+               "latest" : 56
             }
          ],
          "required" : [
