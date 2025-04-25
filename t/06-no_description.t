@@ -1,6 +1,6 @@
-use strict;
 use Test::More;
 
+use strict;
 use JSON::Schema::Generate;
 
 my $data1 = '{
@@ -73,13 +73,28 @@ my $schema = JSON::Schema::Generate->new(
 	id => 'https://metacpan.org/author.json',
 	title => 'The CPAN Author Schema',
 	description => 'A representation of a cpan author.',
-	no_id => \1
-)->learn($data1)->learn($data2)->generate(1);
+	no_description => 1
+)->learn($data1)->learn($data2)->generate;
 
-use JSON::Schema::Draft201909;
+my $schema_file = 't/schemas/schema-no_description.json';
+if ($ENV{GENERATE_SCHEMA_FILES} == 1) {
+  open my $fh, '>', $schema_file;
+  print $fh $schema;
+  close $fh;
+}
 
-$js = JSON::Schema::Draft201909->new;
-$result = $js->evaluate_json_string($data1, $schema);
-ok($result->{errors});
+my $schema_from_file;
+{
+  local($/) = undef;
+  open my $fh, "<", $schema_file or die "Failed to open '$schema_file'... $!";
+  $schema_from_file = <$fh>;
+  close $fh;
+}
 
+is ($schema, $schema_from_file, "schema matched previously generated");
+
+use JSON::Schema;
+my $validator = JSON::Schema->new($schema);
+my $result = $validator->validate($data1);
+ok($result);
 done_testing;
