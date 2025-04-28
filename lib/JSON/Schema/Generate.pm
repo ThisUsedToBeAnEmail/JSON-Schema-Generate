@@ -65,7 +65,7 @@ BEGIN {
 			},
 		}
 	);
-	$JSON = JSON->new->pretty;
+	$JSON = JSON->new->canonical->pretty;
 }
 
 sub new {
@@ -133,7 +133,7 @@ sub _build_props {
 		$self->_unique_examples($props, $data);
 		return if ref $props->{type};
 		if (!$props->{properties}) {
-			$props->{required} = {} unless $self->{none_required};
+			$props->{required} = _tie_hash() unless $self->{none_required};
 			$props->{properties} = _tie_hash();
 		}
 		for my $key (sort keys %{$data}) {

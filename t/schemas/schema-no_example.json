@@ -1,202 +1,202 @@
 {
-   "$schema" : "http://json-schema.org/draft-07/schema#",
    "$id" : "https://metacpan.org/author.json",
-   "title" : "The CPAN Author Schema",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
    "description" : "A representation of a cpan author.",
-   "type" : "object",
-   "required" : [
-      "email",
-      "release_count",
-      "pauseid",
-      "name",
-      "is_pause_custodial_account",
-      "asciiname",
-      "gravatar_url",
-      "website",
-      "other",
-      "links"
-   ],
    "properties" : {
       "asciiname" : {
          "$id" : "#properties-asciiname",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
+         "title" : "The title",
          "type" : "string"
       },
       "city" : {
          "$id" : "#properties-city",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
+         "title" : "The title",
          "type" : "string"
       },
       "country" : {
          "$id" : "#properties-country",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
+         "title" : "The title",
          "type" : "string"
       },
       "email" : {
          "$id" : "#properties-email",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
+         "items" : {
+            "$id" : "#properties-email-items",
+            "description" : "An explanation about the purpose of this instance.",
+            "title" : "The Items Schema",
+            "type" : "string"
+         },
+         "title" : "The title",
          "type" : [
             "array",
             "string"
-         ],
-         "items" : {
-            "$id" : "#properties-email-items",
-            "title" : "The Items Schema",
-            "description" : "An explanation about the purpose of this instance.",
-            "type" : "string"
-         }
+         ]
       },
       "gravatar_url" : {
          "$id" : "#properties-gravatar_url",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
+         "title" : "The title",
          "type" : "string"
       },
       "is_pause_custodial_account" : {
          "$id" : "#properties-is_pause_custodial_account",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
+         "title" : "The title",
          "type" : "boolean"
       },
       "links" : {
          "$id" : "#properties-links",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
-         "type" : "object",
-         "required" : [
-            "metacpan_explorer",
-            "cpan_directory",
-            "cpants",
-            "backpan_directory",
-            "cpantesters_matrix",
-            "cpantesters_reports"
-         ],
          "properties" : {
             "backpan_directory" : {
                "$id" : "#properties-links-properties-backpan_directory",
-               "title" : "The title",
                "description" : "An explanation about the purpose of this instance",
+               "title" : "The title",
                "type" : "string"
             },
             "cpan_directory" : {
                "$id" : "#properties-links-properties-cpan_directory",
-               "title" : "The title",
                "description" : "An explanation about the purpose of this instance",
+               "title" : "The title",
                "type" : "string"
             },
             "cpantesters_matrix" : {
                "$id" : "#properties-links-properties-cpantesters_matrix",
-               "title" : "The title",
                "description" : "An explanation about the purpose of this instance",
+               "title" : "The title",
                "type" : "string"
             },
             "cpantesters_reports" : {
                "$id" : "#properties-links-properties-cpantesters_reports",
-               "title" : "The title",
                "description" : "An explanation about the purpose of this instance",
+               "title" : "The title",
                "type" : "string"
             },
             "cpants" : {
                "$id" : "#properties-links-properties-cpants",
-               "title" : "The title",
                "description" : "An explanation about the purpose of this instance",
+               "title" : "The title",
                "type" : "string"
             },
             "metacpan_explorer" : {
                "$id" : "#properties-links-properties-metacpan_explorer",
-               "title" : "The title",
                "description" : "An explanation about the purpose of this instance",
+               "title" : "The title",
                "type" : "string"
             }
-         }
+         },
+         "required" : [
+            "backpan_directory",
+            "cpan_directory",
+            "cpantesters_matrix",
+            "cpantesters_reports",
+            "cpants",
+            "metacpan_explorer"
+         ],
+         "title" : "The title",
+         "type" : "object"
       },
       "name" : {
          "$id" : "#properties-name",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
+         "title" : "The title",
          "type" : "string"
       },
       "other" : {
          "$id" : "#properties-other",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
-         "type" : "array",
          "items" : {
             "$id" : "#properties-other-items",
-            "title" : "The Items Schema",
             "description" : "An explanation about the purpose of this instance.",
+            "title" : "The Items Schema",
             "type" : [
                "boolean",
                "null",
                "string",
                "integer"
             ]
-         }
+         },
+         "title" : "The title",
+         "type" : "array"
       },
       "pauseid" : {
          "$id" : "#properties-pauseid",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
+         "title" : "The title",
          "type" : "string"
       },
       "region" : {
          "$id" : "#properties-region",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
+         "title" : "The title",
          "type" : "string"
       },
       "release_count" : {
          "$id" : "#properties-release_count",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
-         "type" : "object",
-         "required" : [
-            "latest",
-            "backpan-only",
-            "cpan"
-         ],
          "properties" : {
             "backpan-only" : {
                "$id" : "#properties-release_count-properties-backpan-only",
-               "title" : "The title",
                "description" : "An explanation about the purpose of this instance",
+               "title" : "The title",
                "type" : "integer"
             },
             "cpan" : {
                "$id" : "#properties-release_count-properties-cpan",
-               "title" : "The title",
                "description" : "An explanation about the purpose of this instance",
+               "title" : "The title",
                "type" : "integer"
             },
             "latest" : {
                "$id" : "#properties-release_count-properties-latest",
-               "title" : "The title",
                "description" : "An explanation about the purpose of this instance",
+               "title" : "The title",
                "type" : "integer"
             }
-         }
+         },
+         "required" : [
+            "backpan-only",
+            "cpan",
+            "latest"
+         ],
+         "title" : "The title",
+         "type" : "object"
       },
       "updated" : {
          "$id" : "#properties-updated",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
+         "title" : "The title",
          "type" : "string"
       },
       "website" : {
          "$id" : "#properties-website",
-         "title" : "The title",
          "description" : "An explanation about the purpose of this instance",
-         "type" : "array",
          "items" : {
             "$id" : "#properties-website-items",
-            "title" : "The Items Schema",
             "description" : "An explanation about the purpose of this instance.",
+            "title" : "The Items Schema",
             "type" : "string"
-         }
+         },
+         "title" : "The title",
+         "type" : "array"
       }
-   }
+   },
+   "required" : [
+      "asciiname",
+      "email",
+      "gravatar_url",
+      "is_pause_custodial_account",
+      "links",
+      "name",
+      "other",
+      "pauseid",
+      "release_count",
+      "website"
+   ],
+   "title" : "The CPAN Author Schema",
+   "type" : "object"
 }

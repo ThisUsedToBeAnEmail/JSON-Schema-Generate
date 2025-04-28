@@ -1,21 +1,7 @@
 {
-   "$schema" : "http://json-schema.org/draft-07/schema#",
    "$id" : "https://metacpan.org/author.json",
-   "title" : "The CPAN Author Schema",
+   "$schema" : "http://json-schema.org/draft-07/schema#",
    "description" : "A representation of a cpan author.",
-   "type" : "object",
-   "required" : [
-      "pauseid",
-      "gravatar_url",
-      "other",
-      "name",
-      "website",
-      "asciiname",
-      "is_pause_custodial_account",
-      "email",
-      "links",
-      "release_count"
-   ],
    "properties" : {
       "asciiname" : {
          "type" : "string"
@@ -27,13 +13,13 @@
          "type" : "string"
       },
       "email" : {
+         "items" : {
+            "type" : "string"
+         },
          "type" : [
             "array",
             "string"
-         ],
-         "items" : {
-            "type" : "string"
-         }
+         ]
       },
       "gravatar_url" : {
          "type" : "string"
@@ -42,15 +28,6 @@
          "type" : "boolean"
       },
       "links" : {
-         "type" : "object",
-         "required" : [
-            "cpantesters_matrix",
-            "cpants",
-            "backpan_directory",
-            "metacpan_explorer",
-            "cpantesters_reports",
-            "cpan_directory"
-         ],
          "properties" : {
             "backpan_directory" : {
                "type" : "string"
@@ -70,13 +47,21 @@
             "metacpan_explorer" : {
                "type" : "string"
             }
-         }
+         },
+         "required" : [
+            "backpan_directory",
+            "cpan_directory",
+            "cpantesters_matrix",
+            "cpantesters_reports",
+            "cpants",
+            "metacpan_explorer"
+         ],
+         "type" : "object"
       },
       "name" : {
          "type" : "string"
       },
       "other" : {
-         "type" : "array",
          "items" : {
             "type" : [
                "boolean",
@@ -84,7 +69,8 @@
                "string",
                "integer"
             ]
-         }
+         },
+         "type" : "array"
       },
       "pauseid" : {
          "type" : "string"
@@ -93,12 +79,6 @@
          "type" : "string"
       },
       "release_count" : {
-         "type" : "object",
-         "required" : [
-            "backpan-only",
-            "latest",
-            "cpan"
-         ],
          "properties" : {
             "backpan-only" : {
                "type" : "integer"
@@ -109,16 +89,36 @@
             "latest" : {
                "type" : "integer"
             }
-         }
+         },
+         "required" : [
+            "backpan-only",
+            "cpan",
+            "latest"
+         ],
+         "type" : "object"
       },
       "updated" : {
          "type" : "string"
       },
       "website" : {
-         "type" : "array",
          "items" : {
             "type" : "string"
-         }
+         },
+         "type" : "array"
       }
-   }
+   },
+   "required" : [
+      "asciiname",
+      "email",
+      "gravatar_url",
+      "is_pause_custodial_account",
+      "links",
+      "name",
+      "other",
+      "pauseid",
+      "release_count",
+      "website"
+   ],
+   "title" : "The CPAN Author Schema",
+   "type" : "object"
 }
