@@ -8,3 +8,6 @@ Revision history for JSON-Schema-Generate
         - merge_examples - Merge all learn data examples into a single example
 	- none_required - Do not analyse required keys in properties
 	- no_id - do not add $id(s) to properties and items
+
+0.13	2025/04/28
+	- Adding new parameters (no_title, no_description, no_example and minimal_schema) and fleshing out unit tests to support them. James Pattie (JAMESP)

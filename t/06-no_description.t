@@ -1,6 +1,6 @@
-use strict;
 use Test::More;
 
+use strict;
 use JSON::Schema::Generate;
 
 my $data1 = '{
@@ -73,9 +73,10 @@ my $schema = JSON::Schema::Generate->new(
 	id => 'https://metacpan.org/author.json',
 	title => 'The CPAN Author Schema',
 	description => 'A representation of a cpan author.',
+	no_description => 1
 )->learn($data1)->learn($data2)->generate;
 
-my $schema_file = 't/schemas/schema-merged-examples.json';
+my $schema_file = 't/schemas/schema-no_description.json';
 if ($ENV{GENERATE_SCHEMA_FILES} == 1) {
   open my $fh, '>', $schema_file;
   print $fh $schema;

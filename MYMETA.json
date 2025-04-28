@@ -1,0 +1,66 @@
+{
+   "abstract" : "Generate JSON Schemas from data!",
+   "author" : [
+      "LNATION <email@lnation.org>"
+   ],
+   "dynamic_config" : 0,
+   "generated_by" : "ExtUtils::MakeMaker version 7.70, CPAN::Meta::Converter version 2.150010",
+   "license" : [
+      "artistic_2"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : 2
+   },
+   "name" : "JSON-Schema-Generate",
+   "no_index" : {
+      "directory" : [
+         "t",
+         "inc"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Blessed::Merge" : "1.00",
+            "Compiled::Params::OO" : "0.04",
+            "JSON" : "0",
+            "Tie::IxHash" : "1.23",
+            "Type::Tiny" : "1.010001",
+            "perl" : "5.006"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "JSON::Schema" : "0",
+            "Test::More" : "0"
+         }
+      }
+   },
+   "provides" : {
+      "JSON::Schema::Generate" : {
+         "file" : "lib/JSON/Schema/Generate.pm",
+         "version" : "0.12"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "repository" : {
+         "type" : "git",
+         "url" : "https://github.com/ThisUsedToBeAnEmail/JSON-Schema-Generate.git",
+         "web" : "https://github.com/ThisUsedToBeAnEmail/JSON-Schema-Generate"
+      }
+   },
+   "version" : "0.12",
+   "x_serialization_backend" : "JSON::PP version 4.16"
+}
